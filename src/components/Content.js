@@ -3,31 +3,51 @@ import React from "react"
 export const Content = ({
   items,
   increment = (f) => f,
-  cartData = (f) => f
+  cartitem = (f) => f
 }) => {
   return (
-    <div className="items">
+    <div className="products">
       {items.results.map((item, i) => (
-        <Item key={i} item={item} increment={increment} cartData={cartData} />
+        <Item
+          key={i}
+          id={i}
+          item={item}
+          increment={increment}
+          cartitem={cartitem}
+        />
       ))}
     </div>
   )
 }
-export const Item = ({ item, increment = (f) => f, cartData = (f) => f }) => {
+export const Item = ({
+  id,
+  item,
+  increment = (f) => f,
+  cartitem = (f) => f
+}) => {
   const {
-    defaultArticle: { code }
+    name,
+    price: { value },
+    images,
+    brandName
   } = item
-
-  const cartdata = {}
+  const itemdata = {
+    name,
+    value,
+    images,
+    brandName,
+    id
+  }
   return (
-    <div className="item">
-      <img src={item.images[0].url} alt="product image" />
-      <h5>{item.name}</h5>
-      <p>{item.price.value}</p>
+    <div className="product">
+      <img src={item.images[0].url} alt="product" className="productimage" />
+      <h5 className="productname">{item.name}</h5>
+      <p className="productprice">{item.price.value}</p>
       <button
+        className="addtocart"
         onClick={() => {
-          cartData(code)
           increment()
+          cartitem(itemdata)
         }}>
         ADD TO CART
       </button>

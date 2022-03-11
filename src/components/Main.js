@@ -8,7 +8,7 @@ const Main = ({
   error,
   data,
   increment = (f) => f,
-  cartData = (f) => f
+  cartitem = (f) => f
 }) => {
   if (loading) {
     return <p>loading...</p>
@@ -20,9 +20,9 @@ const Main = ({
     return null
   }
   return (
-    <div>
+    <div className="home-page">
       <Nav cartCount={cartCount} />
-      <Content items={data} increment={increment} cartData={cartData} />
+      <Content items={data} increment={increment} cartitem={cartitem} />
     </div>
   )
 }

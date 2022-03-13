@@ -10,4 +10,4 @@ H & M API
 
 ## Demo
 
-[app](shopprapp.netlify.app)
+[app](https://shopprapp.netlify.app)

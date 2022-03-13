@@ -1,4 +1,5 @@
 import React from "react"
+import "./styles/content.css"
 
 export const Content = ({
   items,
@@ -19,6 +20,7 @@ export const Content = ({
     </div>
   )
 }
+
 export const Item = ({
   id,
   item,
@@ -31,6 +33,7 @@ export const Item = ({
     images,
     brandName
   } = item
+
   const itemdata = {
     name,
     value,
@@ -38,19 +41,22 @@ export const Item = ({
     brandName,
     id
   }
+
   return (
     <div className="product">
-      <img src={item.images[0].url} alt="product" className="productimage" />
-      <h5 className="productname">{item.name}</h5>
-      <p className="productprice">{item.price.value}</p>
-      <button
-        className="addtocart"
-        onClick={() => {
-          increment()
-          cartitem(itemdata)
-        }}>
-        ADD TO CART
-      </button>
+      <div className="product-container">
+        <img src={item.images[0].url} alt="product" className="productimage" />
+        <h5 className="productname">{item.name}</h5>
+        <p className="productprice">{`$${item.price.value}`}</p>
+        <button
+          className="addtocart"
+          onClick={() => {
+            increment()
+            cartitem(itemdata)
+          }}>
+          ADD TO CART
+        </button>
+      </div>
     </div>
   )
 }

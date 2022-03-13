@@ -1,6 +1,7 @@
 import React from "react"
 import Nav from "./Nav"
 import { Content } from "./Content"
+import "./styles/main.css"
 
 const Main = ({
   cartCount,
@@ -10,15 +11,12 @@ const Main = ({
   increment = (f) => f,
   cartitem = (f) => f
 }) => {
-  if (loading) {
-    return <p>loading...</p>
-  }
-  if (error) {
-    return <p>error loading page,try again!</p>
-  }
-  if (!data) {
-    return null
-  }
+  if (loading) return <p className="loading">loading...</p>
+
+  if (error) return <p className="error">error loading page,try again!</p>
+
+  if (!data) return null
+
   return (
     <div className="home-page">
       <Nav cartCount={cartCount} />

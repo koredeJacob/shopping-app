@@ -1,0 +1,15 @@
+.navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  border-bottom: 2px solid black;
+  align-items: start;
+}
+.shop-name {
+  margin: 0px;
+  height: 100%;
+}
+.shopping-icon {
+  height: 100%;
+  justify-self: end;
+}

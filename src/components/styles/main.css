@@ -1,0 +1,21 @@
+.home-page {
+  width: 96%;
+  margin: auto;
+  margin-top: 15px;
+}
+.loading,
+.error {
+  width: 100px;
+  margin: auto;
+  margin-top: 200px;
+}
+@media (min-width: 600px) {
+  .home-page {
+    width: 80%;
+  }
+}
+@media (min-width: 1000px) {
+  .home-page {
+    width: 70%;
+  }
+}

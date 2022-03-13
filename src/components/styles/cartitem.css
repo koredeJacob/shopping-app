@@ -1,0 +1,42 @@
+.itemcontainer {
+  width: 96%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 48%;
+  grid-gap: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+}
+.cartimage {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  height: 215px;
+}
+.cart-itemimage,
+.cart-iteminfo {
+  margin: 5px;
+}
+.cart-iteminfo {
+  margin-left: 0px;
+}
+.itembrandname,
+.itemname,
+.itemprice,
+.itemtotal {
+  margin: 3px;
+}
+.removebutton,
+.addbutton {
+  background-color: black;
+  color: white;
+}
+.itemcount {
+  padding: 4px;
+}
+.itembrandname {
+  margin-top: 0px;
+}
+.grey {
+  color: rgb(92, 92, 92);
+}

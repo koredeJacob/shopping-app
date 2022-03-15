@@ -6,6 +6,7 @@ import "./styles/cart.css"
 /* page for cart items
 displays the items added to cart
 */
+//cart
 const Cart = ({
   cartCount,
   cartdata,

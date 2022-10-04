@@ -10,4 +10,4 @@ a shopping app created with react and the H & M API
 
 ## Demo
 
-[app](https://shopprapp.netlify.app)
+[https://shopprapp.netlify.app](https://shopprapp.netlify.app)

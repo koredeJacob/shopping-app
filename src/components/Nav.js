@@ -10,7 +10,7 @@ const Nav = ({ cartCount }) => {
       <h3 className="shop-name">shoppr</h3>
       <div className="shopping-icon">
         <Badge color="secondary" badgeContent={cartCount}>
-          <Link to="cart">
+          <Link to="/cart">
             <ShoppingCart color="primary" />
           </Link>
         </Badge>
